@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metoda Trierii</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+
+    <h1 class="first-page-title">Metoda Trierii</h1>
+
+    <section id="introducere">
+        <div class="first-page-content">
+            <p>
+                <strong>Definiție:</strong> Se numește metoda trierii metoda ce identifică toate soluțiile unei probleme în dependență de mulțimea soluțiilor posibile. Toate soluțiile se identifică prin valori, ce aparțin tipurilor de date studiate: integer, boolean, enumerare sau subdomeniu. În probleme mai complicate este nevoie de a reprezenta aceste elemente prin tablouri, articole sau mulțimi.
+            </p>
+            <p>
+                Schema de aplicare a metodei trierii este reprezentată mai jos:
+            </p>
+            <img src="schema.png" alt="Descrierea imaginii">
+            <p>Probleme din viață rezolvabile prin metoda trierii
+
+
+                Metoda trierii poate fi folosită pentru rezolvarea următoarelor probleme din viață:
+                
+                aflarea numărului minim de monede care pot fi date drept plată sau rest;
+                medicii deseori se confruntă cu necesitatea aplicării metodei trierii cazurilor, când numărul răniților sau bolnavilor este foarte mare, medicul fiind suprasolicitat, în cazul unui război, sau când își periclitează propria viață în cazul unei epidemii periculoase;
+                aflarea ariei maxime a unui lot de teren, avînd la dispoziție o anumită lungime de sîrmă ghimpată, spre exemplu (ca perimetru dat);
+                generarea submulțimilor unei mulțimi (aflarea tuturor combinațiilor posibile), ceea ce ne poate fi foarte util în viața de zi cu zi;
+                afișarea coordonatelor a două puncte date ce au distanță minimă sau maximă, ceea ce va fi foarte folositor dacă plănuim o călătorie;
+                calcularea șanselor de a lua premiul mare la loterie etc.
+                
+                <p align="center">Exemplu de problemă</p>
+                
+               <p font-size: 40px> Se consideră numerele naturale din mulţimea {0, 1, 2, …, n}. Elaboraţi un program care determină pentru cîte numere K din această mulţime suma cifrelor fiecărui număr este egală cu m. În particular, pentru n=100 si m=2, în mulţimea{0, 1, 2, …, 100} există 3 numere care satisfac condiţiile problemei: 2, 11 si 20.Prin urmare, K=3.</p>
+                
+                <p align="center">Rezolvare:</p>
+                <p font-size: 40px><ol style="font-size: 30px;" > Program Pex;
+                  <li> Type Natural=0..MaxIn</li>  
+                    <li>Var I, k, m, n : Natural;</li>
+                    <li>Function SumaCifrelor(i:Natural): Natural;</li>
+                    <li>Var suma: Natural;</li>
+                    <li> Begin</li>
+                        <li>Suma:=0;</li>
+                            <li> Repeat</li>
+                                <li>   Suma:=suma+(I mod 10);</li>
+                                    <li>   i:=i div 10;</li>
+                                        <li> until i=0;</li>
+                                            <li>SumaCifrelor:=suma;</li>
+                                                <li> End;</li>
+                                                    <li>Function SolutiePosibila(i:Natural):Boolean;</li>
+                                                        <li> Begin</li>
+                                                            <li> If SumaCifrelor(i)=m then SolutiaPosibila:=true</li>
+                                                                <li>Else SolutiePosibila:=false;</li>
+                                                                    <li>End;</li>
+                                                                        <li>Procedure PrelucrareaSolutiei(i:Natural);</li>
+                                                                            <li> Begin</li>
+                                                                                <li> Writeln(‘i=’, i);</li>
+                                                                                    <li> K:=k+1;</li>
+                                                                                        <li>End;</li>
+                                                                                            <li>Begin</li>
+                                                                                                <li> Write(‘Dati n=’); </li>
+                                                                                                    <li>readln(n);</li>
+                                                                                                        <li>Write(‘Dati m=’); </li>
+                                                                                                            <li> readln(m);</li>
+                                                                                                                <li> K:=0;</li>
+                                                                                                                    <li>For i:=0 to n do</li>
+                                                                                                                        <li>If SolutiePosibila(i) then PrelucrareaSolutiei(i);</li>
+                                                                                                                            <li>Writeln(‘K=’, K)</li>
+                                                                                                                                <li>Readln;</li>
+                                                                                                                                    <li>End.</li></ol></p>
+               </p>
+            <!-- Alte informații și exemple pot fi adăugate aici -->
+
+            <!-- Adăugăm o imagine -->
+           
+        </div>
+        <!-- Alte subtitluri și informații pot fi adăugate aici -->
+    </section>
+
+</body>
+</html>
