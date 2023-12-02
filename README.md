@@ -1,0 +1,2 @@
+# vlad
+tehnici de programare
